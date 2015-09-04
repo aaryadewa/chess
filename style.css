@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+[draggable] {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.clearfix {
+	clear: both;
+}
+
+#frame {
+	border: 1px solid #333;
+	margin: 64px auto;
+	padding: 4px;
+	width: 514px;
+}
+
+#board {
+	border: 1px solid #C90;
+	width: 512px;
+}
+
+#board .row {
+	height: 64px;
+}
+
+#board .row .column {
+	display: inline-block;
+	height: 64px;
+	position: relative;
+	width: 64px;
+}
+
+#board .row .column.droppable.over {
+	box-shadow: inset 0 0 4px #F00;
+}
+
+#board .row .column.start {
+	box-shadow: inset 0 0 4px #00F;
+}
+
+#board .row .column.droppable {
+	box-shadow: inset 0 0 4px #0F0;
+}
+
+#board .row:nth-child(even) .column:nth-child(odd),
+#board .row:nth-child(odd) .column:nth-child(even) {
+	background: #C94;
+}
+
+#board .row:nth-child(even) .column:nth-child(even),
+#board .row:nth-child(odd) .column:nth-child(odd) {
+	background: #EEE;
+}
+
+#board .row .over {
+	background: #73C;
+}
+
+#board .column .piece {
+	background: url("img/chess_small.png") no-repeat;
+	cursor: move;
+	font-size: 42px;
+	height: 43px;
+	margin: 0 auto;
+	width: 33px;
+}
+
+#board .column .piece.move {
+	opacity: .5;
+}
+
+#board .column .piece.P.white {
+	background-position: 0 0;
+}
+
+#board .column .piece.K.white {
+	background-position: -33px 0;
+}
+
+#board .column .piece.KN.white {
+	background-position: -66px 0;
+}
+
+#board .column .piece.R.white {
+	background-position: -99px 0;
+}
+
+#board .column .piece.B.white {
+	background-position: -132px 0;
+}
+
+#board .column .piece.Q.white {
+	background-position: -165px 0;
+}
+
+#board .column .piece.P.black {
+	background-position: 0 -43px;
+}
+
+#board .column .piece.K.black {
+	background-position: -33px -43px;
+}
+
+#board .column .piece.KN.black {
+	background-position: -66px -43px;
+}
+
+#board .column .piece.R.black {
+	background-position: -99px -43px;
+}
+
+#board .column .piece.B.black {
+	background-position: -132px -43px;
+}
+
+#board .column .piece.Q.black {
+	background-position: -165px -43px;
+}
